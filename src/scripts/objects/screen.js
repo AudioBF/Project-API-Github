@@ -3,9 +3,9 @@ const screen = {
     renderUser(user) {
         this.userProfile.innerHTML = `<div class="info">
                                         <img src="${user.avatarUrl}" alt="User profile picture" />
-                                        <div class= "data"?
-                                            <h1>${user.name ?? 'no registered name'}</h1>
-                                            <p>${user.bio ?? 'does not have registered bio'}</p>
+                                        <div class= "data">
+                                            <h1>${user.name ?? 'No registered name'}</h1>
+                                            <p>${user.bio ?? 'No registered bio'}</p>
                                         </div>
                                     </div>`
 
@@ -19,6 +19,9 @@ const screen = {
                                                 <ul>${repositoriesItens}</ul>
                                             </div>`
         }
+    },
+    renderNotFound(){
+        this.userProfile.innerHTML = "<h3>User Not Found</h3>"
     }
 }
 
